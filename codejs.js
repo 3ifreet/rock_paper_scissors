@@ -1,10 +1,6 @@
-const randomN = Math.floor(Math.random()*3+1);
-console.log(randomN);
-
-let machineselection = rps();
-let playerselection = prompt("Rock, Paper, Scissors").toLowerCase();
 
 function rps() {
+    const randomN = Math.floor(Math.random()*3+1);
     if (randomN == 1){
         return "rock";
     }
@@ -17,14 +13,30 @@ function rps() {
 }
 
 function playRound() {
+    let machineselection = rps();
+    let playerselection = prompt("Rock, Paper, Scissors").toLowerCase() ;
     if (machineselection == playerselection) {
-        console.log("DRAW");
+        return console.log("DRAW");
     }
-    else if (((machineselection == "rock") && (playerselection == "paper")) || ((machineselection == "paper") && (playerselection == "scissors"))) {
+    else if (
+        ((machineselection == "rock") && (playerselection == "paper")) || 
+        ((machineselection == "paper") && (playerselection == "scissors")) ||
+        ((machineselection == "scissors") && (playerselection == "rock"))) {
         return console.log("YOU WIN");
     }
     else {
         return console.log("YOU LOSE");
     }
 }
-playRound()
+function game(){
+    for (let i = 0; i<5 ; i++){
+        playRound();
+        
+    }
+     
+}
+
+
+
+
+game();

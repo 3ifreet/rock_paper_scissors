@@ -12,31 +12,23 @@ function rps() {
     }
 }
 
-function playRound() {
+
+function playRound(playerselection) {
     let machineselection = rps();
-    let playerselection = prompt("Rock, Paper, Scissors").toLowerCase() ;
+    //let playerselection = prompt("Rock, Paper, Scissors").toLowerCase() ;
+
     if (machineselection == playerselection) {
-        return console.log("DRAW");
+        return "DRAW";
     }
     else if (
         ((machineselection == "rock") && (playerselection == "paper")) || 
         ((machineselection == "paper") && (playerselection == "scissors")) ||
         ((machineselection == "scissors") && (playerselection == "rock"))) {
-        return console.log("YOU WIN");
+        return "YOU WIN";
     }
     else {
-        return console.log("YOU LOSE");
+        return "YOU LOSE";
     }
 }
-function game(){
-    for (let i = 0; i<5 ; i++){
-        playRound();
-        
-    }
-     
-}
 
 
-
-
-game();

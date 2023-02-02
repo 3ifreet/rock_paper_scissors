@@ -1,0 +1,23 @@
+div {
+    padding: 40px;
+    padding-right: 0px;
+
+}
+#rock {
+    padding: 70px;
+    border-radius: 50%;
+    background-color: rgb(150, 201, 184);
+}
+
+#paper {
+    padding: 70px;
+    border-radius: 50%;
+    background-color: rgb(214, 179, 185) ;
+}
+
+#scissors {
+    padding: 70px;
+    border-radius: 50%;
+    background-color: rgb(132, 132, 196);
+}
+

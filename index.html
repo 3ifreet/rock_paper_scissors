@@ -4,10 +4,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>rps</title>
     <script src="codejs.js"></script>
+    <link rel="shortcut icon" href="#">
+    <link rel="stylesheet" href="rps.css">
 </head>
 <body>
+    <div>
+        <div class="rock">
+            <button id="rock">rock</button>
+        </div>
+        <div class="paper">
+            <button id="paper">paper</button>
+        </div>
+        <div class="scissors">  
+            <button id="scissors">scissors</button>
+        </div>
+        <div class="result">click the buttons</div>
+    </div>
+    <script>
+        var rock = document.querySelector("#rock");
+        var paper = document.querySelector("#paper");
+        var scissors = document.querySelector("#scissors");
+        var result = document.querySelector(".result");
+
+        rock.addEventListener("click", () => {
+            result.innerHTML = playRound("rock");
+        })
+        scissors.addEventListener("click", () => {
+            result.innerHTML = playRound("scissors");
+        })
+        paper.addEventListener("click", () => {
+            result.innerHTML = playRound("paper");
+        })
+    </script>
     
 </body>
 </html>
